@@ -1952,6 +1952,7 @@ impl AidEscrow {
 
         let timestamp = env.ledger().timestamp();
         PackageRevoked {
+            schema_version: EVENT_SCHEMA_VERSION,
             package_id,
             recipient: package.recipient.clone(),
             amount: package.amount,
